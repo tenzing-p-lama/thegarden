@@ -1,0 +1,15 @@
+@use "../../styles/partials/typography" as *;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.hamburger {
+  display: flex;
+}
