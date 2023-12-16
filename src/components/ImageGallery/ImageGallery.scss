@@ -1,0 +1,31 @@
+.cuisine-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  &__images {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    max-width: 100%;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: transparent;
+  height: 100%;
+  padding: 0 1rem;
+  &__left {
+    left: 0;
+  }
+  &__right {
+    right: 0;
+  }
+}

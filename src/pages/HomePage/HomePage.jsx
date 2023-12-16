@@ -1,5 +1,8 @@
+import React from "react";
+
 import "./HomePage.scss";
 import interiorimg from "../../assets/images/theGarden2.jpg";
+import ImageGallery from "../../components/ImageGallery/ImageGallery";
 
 export default function HomePage() {
   return (
@@ -9,11 +12,23 @@ export default function HomePage() {
         <p className="hero__content">The Garden at Ditmas, Brooklyn</p>
       </div>
 
-      <div className="logo">庭</div>
+      <div className="logo-jap">庭</div>
 
-      <div className="image-gallery">textbox with images</div>
+      {/* <div className="image-gallery">textbox with images</div> */}
 
-      <section className="cuisine">more images of food with text</section>
+      <section className="cuisine">
+        <div className="cuisine-desc">
+          <h3 className="desc__title">CUISINE</h3>
+
+          <p className="desc__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero
+            modi harum nostrum corrupti omnis fugit illo reiciendis natus quo.
+            Ea quam ipsam cupiditate quisquam quos incidunt, vero illo maiores.
+          </p>
+        </div>
+
+        <ImageGallery />
+      </section>
 
       <section className="bar">bar images with text</section>
 
