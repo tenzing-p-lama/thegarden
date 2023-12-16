@@ -2,7 +2,8 @@ import React from "react";
 
 import "./HomePage.scss";
 import interiorimg from "../../assets/images/theGarden2.jpg";
-import ImageGallery from "../../components/ImageGallery/ImageGallery";
+import barimg from "../../assets/images/raphael-8980827.jpg";
+import FoodGallery from "../../components/FoodGallery/FoodGallery";
 
 export default function HomePage() {
   return (
@@ -16,8 +17,8 @@ export default function HomePage() {
 
       {/* <div className="image-gallery">textbox with images</div> */}
 
-      <section className="cuisine">
-        <div className="cuisine-desc">
+      <section className="section">
+        <div className="desc">
           <h3 className="desc__title">CUISINE</h3>
 
           <p className="desc__text">
@@ -27,10 +28,25 @@ export default function HomePage() {
           </p>
         </div>
 
-        <ImageGallery />
+        <FoodGallery className="gallery" />
       </section>
 
-      <section className="bar">bar images with text</section>
+      <section className="section">
+        <div className="desc">
+          <h3 className="desc__title">BAR</h3>
+
+          <p className="desc__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
+            velit asperiores accusamus eius quo temporibus non quam
+            consequuntur, voluptate iure ad deleniti optio aperiam cumque quos
+            odio magni, perspiciatis expedita?
+          </p>
+        </div>
+
+        <div className="gallery">
+          <img className="gallery__image" src={barimg} alt="bar" />
+        </div>
+      </section>
 
       <section className="map">
         location map with some text and google map link

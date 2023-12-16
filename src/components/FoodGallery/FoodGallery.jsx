@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ImageGallery.scss";
+import "./FoodGallery.scss";
 import image1 from "../../assets/images/theGarden3.jpg";
 import image2 from "../../assets/images/cottonbro-3338537.jpg";
 import image3 from "../../assets/images/horizon-3763816.jpg";
@@ -9,7 +9,7 @@ import image6 from "../../assets/images/bon-vivant-qom5MPOER.jpg";
 
 const images = [image1, image2, image3, image4, image5, image6];
 
-const ImageGallery = () => {
+const FoodGallery = () => {
   const [image, setimage] = useState(0);
 
   useEffect(() => {
@@ -29,12 +29,12 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className="cuisine-gallery">
+    <div className="gallery">
       <button className="button button__left" onClick={handlePrev}>
         &lt;
       </button>
       <img
-        className="cuisine-gallery__images"
+        className="gallery__images"
         src={images[image]}
         alt={`Image ${image + 1}`}
       />
@@ -45,4 +45,4 @@ const ImageGallery = () => {
   );
 };
 
-export default ImageGallery;
+export default FoodGallery;
