@@ -1,22 +1,26 @@
 @use "../../styles/partials/mixins" as *;
 
 .gallery {
-  width: 100%;
+  width: 100vw;
   height: 100vw;
   @include tablet {
+    height: 80vw;
+    width: 100%;
+  }
+  @include desktop {
     position: relative;
     display: flex;
     align-items: center;
     width: auto;
     height: auto;
+    max-width: 65%;
   }
 
   &__images {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    @include tablet {
+    @include desktop {
       width: 550px;
       height: 550px;
       max-width: 100%;

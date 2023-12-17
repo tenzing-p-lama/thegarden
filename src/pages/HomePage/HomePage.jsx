@@ -4,6 +4,7 @@ import "./HomePage.scss";
 import interiorimg from "../../assets/images/theGarden2.jpg";
 import barimg from "../../assets/images/raphael-8980827.jpg";
 import FoodGallery from "../../components/FoodGallery/FoodGallery";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 export default function HomePage() {
   return (
@@ -13,13 +14,15 @@ export default function HomePage() {
         <p className="hero__content">The Garden at Ditmas, Brooklyn</p>
       </div>
 
-      <div className="logo-jap">庭</div>
+      <div className="logo-jap">
+        <h1>庭</h1>
+      </div>
 
       {/* <div className="image-gallery">textbox with images</div> */}
 
       <section className="section">
         <div className="desc">
-          <h3 className="desc__title">CUISINE</h3>
+          <h2 className="desc__title">CUISINE</h2>
 
           <p className="desc__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero
@@ -33,7 +36,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="desc">
-          <h3 className="desc__title">BAR</h3>
+          <h2 className="desc__title">BAR</h2>
 
           <p className="desc__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
@@ -48,8 +51,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="map">
-        location map with some text and google map link
+      <section className="section">
+        <div className="desc">
+          <h2 className="desc__title">ACCESS</h2>
+
+          <div className="desc__text">
+            <div className="desc__text-section">
+              <p className="desc__text-title">Address</p>
+              <p className="dec__text-content">
+                1108 Cortelyou Rd, Brooklyn, NY 11218, USA
+              </p>
+            </div>
+
+            <div className="desc__text-section">
+              <p className="desc__text-title">Tel</p>
+              <p className="dec__text-content">+13473652968</p>
+            </div>
+
+            <div className="desc__text-section">
+              <p className="desc__text-title">Hours</p>
+
+              <div className="desc__text-group">
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Monday</p>
+                  <p className="dec__text-content">Closed</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Tuesday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Wednesday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Thursday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Friday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Saturday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+
+                <div className="desc__text-hours">
+                  <p className="desc__text-hours_day">Sunday</p>
+                  <p className="dec__text-content">12pm - 10pm</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="desc__text-section">
+              <p className="desc__text-title">Parking</p>
+              <p className="dec__text-content">
+                Street parking is available along Cortelyou Rd, as well as on
+                the intersecting Stratford Rd and Westminster Rd
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery">
+          <GoogleMap />
+        </div>
       </section>
     </header>
   );
