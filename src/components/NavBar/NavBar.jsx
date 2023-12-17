@@ -1,47 +1,57 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
-import useIntersectionObserver from "../ScrollObserver/useIntersectionObserver";
 
 function NavBar({ onFooterVisibilityChange }) {
-  const { targetRef, isIntersecting } = useIntersectionObserver();
+  const [isFooterHalfwayVisible, setFooterHalfwayVisible] = useState(false);
 
   useEffect(() => {
-    onFooterVisibilityChange && onFooterVisibilityChange(isIntersecting);
-  }, [isIntersecting, onFooterVisibilityChange]);
+    const handleScroll = () => {
+      const footerElement = document.getElementById("footerId");
 
-  // const navRef = useRef(null);
-  // const [isFooterHalfwayVisible, setFooterHalfwayVisible] = useState(false);
+      if (footerElement) {
+        const rect = footerElement.getBoundingClientRect();
+        const halfwayVisible =
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2;
 
-  // useEffect(() => {
-  //   const handleIntersect = (entries) => {
-  //     const halfwayVisible = entries[0].isIntersecting;
-  //     setFooterHalfwayVisible(halfwayVisible);
-  //   };
+        setFooterHalfwayVisible(halfwayVisible);
+        onFooterVisibilityChange && onFooterVisibilityChange(halfwayVisible);
+      }
+    };
 
-  //   const observer = new IntersectionObserver(handleIntersect, {
-  //     threshold: 0.5,
-  //   });
+    window.addEventListener("scroll", handleScroll);
 
-  //   if (navRef.current) {
-  //     observer.observe(navRef.current);
-  //   }
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [onFooterVisibilityChange]);
 
   return (
-    <div className={`navbar ${isIntersecting ? "footer-halfway-visible" : ""}`}>
-      <nav className="nav" ref={targetRef}>
-        <Link className="nav-logo" to="/">
+    <div className="navbar">
+      {/* <nav
+        className={`nav ${
+          isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+        }`}
+      > */}
+      <nav className="nav">
+        <Link
+          className={`nav-logo ${
+            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+          }`}
+          to="/"
+        >
           <div className="logo-name">the garden</div>
           <p>RESTAURANT AND BAR</p>
         </Link>
 
         <div className="nav-hamburger">
-          <a href="/" className="nav__menu">
+          <a
+            href="/"
+            className={`nav__menu ${
+              isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+            }`}
+          >
             MENU
           </a>
         </div>

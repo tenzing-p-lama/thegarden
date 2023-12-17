@@ -18,8 +18,6 @@ export default function HomePage() {
         <h1>庭</h1>
       </div>
 
-      {/* <div className="image-gallery">textbox with images</div> */}
-
       <section className="section">
         <div className="desc">
           <h2 className="desc__title">CUISINE</h2>

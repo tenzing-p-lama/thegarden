@@ -7,8 +7,9 @@ function Footer({ onFooterVisibilityChange }) {
   useEffect(() => {
     const handleScroll = () => {
       const footerElement = document.getElementById("footerId");
+      const logoJapElement = document.getElementById("logoJapId");
 
-      if (footerElement) {
+      if (footerElement && logoJapElement) {
         const rect = footerElement.getBoundingClientRect();
         const halfwayVisible =
           rect.top <= window.innerHeight / 2 &&
@@ -16,9 +17,10 @@ function Footer({ onFooterVisibilityChange }) {
 
         setHalfwayVisible(halfwayVisible);
         onFooterVisibilityChange && onFooterVisibilityChange(halfwayVisible); // Notify parent component if the callback is provided
+
+        logoJapElement.classList.toggle("halfway-visible", halfwayVisible);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -94,7 +96,9 @@ function Footer({ onFooterVisibilityChange }) {
       </div>
 
       <div className="footer-right">
-        <div className="logo-jap">庭</div>
+        <div className="logo-jap" id="logoJapId">
+          庭
+        </div>
         <div className="logo-name">the garden</div>
       </div>
     </footer>

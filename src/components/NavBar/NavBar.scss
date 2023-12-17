@@ -39,8 +39,9 @@
   }
 }
 
-.navbar.footer-halfway-visible {
-  .nav-logo {
-    color: white; // Change to your desired color
-  }
+.nav-logo.footer-halfway-visible {
+  color: white;
+}
+.nav__menu.footer-halfway-visible {
+  color: white;
 }
