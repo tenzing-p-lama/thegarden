@@ -1,9 +1,8 @@
-// api = AIzaSyBoCgSFLLlKNDLKYco754g8cb4m5F_o1z4
-
 import React from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./GoogleMap.scss";
 
+const apiKey = process.env.REACT_APP_API_KEY;
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "100%",
@@ -203,7 +202,7 @@ const customMapStyles = [
 
 const GoogleMaps = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBoCgSFLLlKNDLKYco754g8cb4m5F_o1z4",
+    googleMapsApiKey: apiKey,
     libraries,
   });
 
