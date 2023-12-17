@@ -1,0 +1,31 @@
+.contact {
+  padding: 125px 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-table {
+    width: 100%;
+    text-align: left;
+  }
+
+  &-header {
+    padding-bottom: 6rem;
+  }
+
+  &-item {
+    &__td {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+td,
+th {
+  display: block;
+  width: 100%;
+}

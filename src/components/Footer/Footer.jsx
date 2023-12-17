@@ -85,7 +85,7 @@ function Footer({ onFooterVisibilityChange }) {
         </div>
 
         <div className="footer-section">
-          <a href="/">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
 
         <div className="footer-section">
