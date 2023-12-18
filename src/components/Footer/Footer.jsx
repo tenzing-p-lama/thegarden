@@ -89,7 +89,13 @@ function Footer({ onFooterVisibilityChange }) {
         </div>
 
         <div className="footer-section">
-          <a href="/">Instagram</a>
+          <a
+            href="https://www.instagram.com/thegardenatditmas/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </div>
 
         <copyright>©TheGardenAtDitmas</copyright>
