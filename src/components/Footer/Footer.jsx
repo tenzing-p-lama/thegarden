@@ -98,7 +98,7 @@ function Footer({ onFooterVisibilityChange }) {
           </a>
         </div>
 
-        <copyright>©TheGardenAtDitmas</copyright>
+        <p className="copyright">©TheGardenAtDitmas</p>
       </div>
 
       <div className="footer-right">

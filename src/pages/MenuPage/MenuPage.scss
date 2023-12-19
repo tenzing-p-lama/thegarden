@@ -1,0 +1,52 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  &-menu {
+    border: 1px solid $secondary-black;
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+.menu {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+
+  &-categories {
+    display: flex;
+    justify-content: center;
+  }
+  &-category {
+    // padding: 1rem;
+    // cursor: pointer;
+    &__item {
+      background: none;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__item {
+      width: 48%;
+      border: 1px solid $secondary-black;
+      list-style: none;
+      padding: 10px;
+    }
+  }
+}

@@ -47,7 +47,7 @@ function NavBar({ onFooterVisibilityChange }) {
 
         <div className="nav-hamburger">
           <a
-            href="/"
+            href="/menu"
             className={`nav__menu ${
               isFooterHalfwayVisible ? "footer-halfway-visible" : ""
             }`}

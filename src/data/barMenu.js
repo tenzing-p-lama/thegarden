@@ -1,4 +1,4 @@
-const sushiBarMenu = [
+export const sushiBarMenu = [
   {
     category: "Sushi Appetizers",
     items: [
@@ -261,35 +261,6 @@ const sushiBarMenu = [
         id: 104,
         name: "Spicy Mayo",
         price: 2,
-      },
-    ],
-  },
-  {
-    category: "Dessert",
-    items: [
-      {
-        id: 111,
-        name: "Yuzu Cheese Cake",
-        description:
-          "2 slices of yuzu cheese cake served with your choice of vanilla or green tea ice cream",
-        price: 8,
-      },
-      {
-        id: 112,
-        name: "Green Tea Cheese Cake",
-        description:
-          "2 slices of green tea cheese cake served with your choice of vanilla or green tea ice cream",
-        price: 8,
-      },
-      {
-        id: 113,
-        name: "Vanilla Ice Cream",
-        price: 4,
-      },
-      {
-        id: 114,
-        name: "Green Tea Ice Cream",
-        price: 4,
       },
     ],
   },

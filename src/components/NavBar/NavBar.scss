@@ -1,4 +1,5 @@
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .navbar {
   background: transparent;
@@ -18,7 +19,7 @@
   &-logo {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: $secondary-black;
     &:hover {
       opacity: 0.7;
     }
@@ -30,18 +31,18 @@
 
   &__menu {
     text-decoration: none;
-    color: black;
+    color: $secondary-black;
     cursor: pointer;
     &:hover {
-      color: red;
+      color: $primary-color;
       opacity: 0.7;
     }
   }
 }
 
 .nav-logo.footer-halfway-visible {
-  color: white;
+  color: $secondary-white;
 }
 .nav__menu.footer-halfway-visible {
-  color: white;
+  color: $secondary-white;
 }

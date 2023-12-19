@@ -1,4 +1,6 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .App-header {
   padding: 125px 0;
@@ -6,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  //   justify-content: center;
 }
 .hero {
   margin-bottom: 80px;
@@ -36,7 +38,7 @@
 
 .logo-jap {
   font-size: 6rem;
-  color: red;
+  color: $primary-color;
   @include tablet {
     margin: 3rem 0;
   }

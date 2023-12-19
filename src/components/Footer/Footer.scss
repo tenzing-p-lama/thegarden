@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 .footer {
   display: flex;
   flex-direction: column-reverse;
@@ -21,9 +23,9 @@
 }
 
 body.halfway-visible {
-  background-color: red;
-  color: white;
+  background-color: $primary-color;
+  color: $secondary-white;
 }
 .logo-jap.halfway-visible {
-  color: white;
+  color: $secondary-white;
 }
