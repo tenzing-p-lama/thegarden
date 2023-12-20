@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MenuPage.scss";
 import { menuData } from "../../data/menu";
 import { sushiBarMenu } from "../../data/barMenu";
@@ -17,11 +17,28 @@ const MenuPage = () => {
     setSelectedSushiBarCategory(category);
   };
 
+  const foodCategoryRef = useRef(null);
+  const sushiBarCategoryRef = useRef(null);
+
+  useEffect(() => {
+    // Set focus on the default food category button
+    foodCategoryRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    // Set focus on the default sushi bar category button
+    sushiBarCategoryRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="App-header">
       <div className="menu-title">
-        <h1 className="menu-title__eng">Menu</h1>
         <h2 className="menu-title__jap">メニュー</h2>
+        <h1 className="menu-title__eng">Menu</h1>
       </div>
 
       <div className="header">
@@ -44,6 +61,7 @@ const MenuPage = () => {
             {menuData.map((category) => (
               <div key={category.category} className="menu-category">
                 <button
+                  ref={foodCategoryRef}
                   className={`menu-category__item ${
                     category.category === selectedFoodCategory
                       ? "menu-category__selected"
@@ -52,7 +70,6 @@ const MenuPage = () => {
                       : ""
                   }`}
                   onClick={() => handleFoodCategoryClick(category.category)}
-                  autoFocus={category.category === "Appetizers"} // Add this line
                 >
                   {category.category}
                 </button>
@@ -105,7 +122,17 @@ const MenuPage = () => {
             {sushiBarMenu.map((category) => (
               <div key={category.category} className="menu-category">
                 <button
-                  className="menu-category__item"
+                  //   className="menu-category__item"
+                  //   onClick={() => handleSushiBarCategoryClick(category.category)}
+
+                  ref={sushiBarCategoryRef}
+                  className={`menu-category__item ${
+                    category.category === selectedSushiBarCategory
+                      ? "menu-category__selected"
+                      : category.category === "Sushi Appetizers"
+                      ? "menu-category__default"
+                      : ""
+                  }`}
                   onClick={() => handleSushiBarCategoryClick(category.category)}
                 >
                   {category.category}

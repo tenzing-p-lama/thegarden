@@ -102,10 +102,14 @@ function Footer({ onFooterVisibilityChange }) {
       </div>
 
       <div className="footer-right">
-        <div className="logo-jap" id="logoJapId">
-          庭
+        <div className="footer-right__logo">
+          <div className="logo-jap" id="logoJapId">
+            庭
+          </div>
+          <div className="logo-name">the garden</div>
         </div>
-        <div className="logo-name">the garden</div>
+
+        <p className="copyright-desktop">©TheGardenAtDitmas</p>
       </div>
     </footer>
   );

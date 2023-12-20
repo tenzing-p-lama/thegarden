@@ -1,25 +1,59 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
 .footer {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 125px 0;
   margin: 0 3rem;
   background-color: transparent;
+  @include tablet {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 650px;
+  }
 
   &-left {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    @include tablet {
+      margin-right: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 550px;
+      margin: 0 auto;
+    }
   }
   &-right {
     margin: 2rem 0;
     text-align: center;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 550px;
+      margin: 0 auto;
+    }
   }
 
   &-section {
     margin-bottom: 3rem;
     letter-spacing: 1px;
+  }
+}
+
+.copyright {
+  @include tablet {
+    display: none;
+  }
+  &-desktop {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-bottom: 3rem;
+    }
   }
 }
 

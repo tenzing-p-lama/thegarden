@@ -16,6 +16,10 @@ export default function HomePage() {
     });
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <header className="App-header">
       <div className="hero">
