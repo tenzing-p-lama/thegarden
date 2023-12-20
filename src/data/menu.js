@@ -193,7 +193,7 @@ export const menuData = [
     ],
   },
   {
-    category: "Ramen (Protein Option Chicken)",
+    category: "Ramen",
     items: [
       {
         id: 41,

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import "./HomePage.scss";
 import interiorimg from "../../assets/images/theGarden2.jpg";
@@ -7,6 +9,13 @@ import FoodGallery from "../../components/FoodGallery/FoodGallery";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 export default function HomePage() {
+  useEffect(() => {
+    Aos.init({
+      duration: 600,
+      offset: 80,
+    });
+  }, []);
+
   return (
     <header className="App-header">
       <div className="hero">
@@ -14,15 +23,18 @@ export default function HomePage() {
         <p className="hero__content">The Garden at Ditmas, Brooklyn</p>
       </div>
 
-      <div className="logo-jap">
-        <h1>庭</h1>
+      <div className="hero-logo" data-aos="fade-up">
+        <h1 className="hero-logo__jap logo-jap">庭</h1>
+        <h2 className="hero-logo__eng logo-name" data-aos="fade-up">
+          the garden
+        </h2>
       </div>
 
-      <section className="section">
-        <div className="desc">
+      <section className="section" data-aos="fade-up">
+        <div className="desc" data-aos="fade-up">
           <h2 className="desc__title">CUISINE</h2>
 
-          <p className="desc__text">
+          <p className="desc__text" data-aos="fade-up">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero
             modi harum nostrum corrupti omnis fugit illo reiciendis natus quo.
             Ea quam ipsam cupiditate quisquam quos incidunt, vero illo maiores.
@@ -32,11 +44,11 @@ export default function HomePage() {
         <FoodGallery className="gallery" />
       </section>
 
-      <section className="section">
-        <div className="desc">
+      <section className="section" data-aos="fade-up">
+        <div className="desc" data-aos="fade-up">
           <h2 className="desc__title">BAR</h2>
 
-          <p className="desc__text">
+          <p className="desc__text" data-aos="fade-up">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             velit asperiores accusamus eius quo temporibus non quam
             consequuntur, voluptate iure ad deleniti optio aperiam cumque quos
@@ -49,11 +61,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="desc">
+      <section className="section" data-aos="fade-up">
+        <div className="desc" data-aos="fade-up">
           <h2 className="desc__title">ACCESS</h2>
 
-          <div className="desc__text">
+          <div className="desc__text" data-aos="fade-up">
             <div className="desc__text-section">
               <p className="desc__text-title">Address</p>
               <p className="dec__text-content">

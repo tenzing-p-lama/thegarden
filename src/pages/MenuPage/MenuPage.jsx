@@ -19,7 +19,10 @@ const MenuPage = () => {
 
   return (
     <div className="App-header">
-      <h1>Menu</h1>
+      <div className="menu-title">
+        <h1 className="menu-title__eng">Menu</h1>
+        <h2 className="menu-title__jap">メニュー</h2>
+      </div>
 
       <div className="header">
         <a href="#menu-section" className="header-menu">
@@ -32,19 +35,45 @@ const MenuPage = () => {
 
       <div className="menu">
         <section className="menu-section" id="menu-section">
-          <h2>Food Menu</h2>
+          <div className="menu-section__header">
+            <h2 className="menu-section__header-jap">食べ物</h2>
+            <h2 className="menu-section__header-eng">Food Menu</h2>
+          </div>
 
           <div className="menu-categories">
             {menuData.map((category) => (
               <div key={category.category} className="menu-category">
                 <button
-                  className="menu-category__item"
+                  className={`menu-category__item ${
+                    category.category === selectedFoodCategory
+                      ? "menu-category__selected"
+                      : category.category === "Appetizers"
+                      ? "menu-category__default"
+                      : ""
+                  }`}
                   onClick={() => handleFoodCategoryClick(category.category)}
+                  autoFocus={category.category === "Appetizers"} // Add this line
                 >
                   {category.category}
                 </button>
               </div>
             ))}
+
+            <select
+              id="categoryDropdown"
+              className="menu-categories__dropdown"
+              value={selectedFoodCategory || ""}
+              onChange={(e) => handleFoodCategoryClick(e.target.value)}
+            >
+              <option value="" disabled>
+                Choose a category
+              </option>
+              {menuData.map((category) => (
+                <option key={category.category} value={category.category}>
+                  {category.category}
+                </option>
+              ))}
+            </select>
           </div>
 
           {selectedFoodCategory && (
@@ -67,7 +96,10 @@ const MenuPage = () => {
         </section>
 
         <section className="menu-section" id="sushibar-section">
-          <h2>Sushi Bar Menu</h2>
+          <div className="menu-section__header">
+            <h2 className="menu-section__header-jap">寿司バー</h2>
+            <h2 className="menu-section__header-eng">Sushi Bar Menu</h2>
+          </div>
 
           <div className="menu-categories">
             {sushiBarMenu.map((category) => (
@@ -80,6 +112,22 @@ const MenuPage = () => {
                 </button>
               </div>
             ))}
+
+            <select
+              id="categoryDropdown"
+              className="menu-categories__dropdown"
+              value={selectedSushiBarCategory || ""}
+              onChange={(e) => handleSushiBarCategoryClick(e.target.value)}
+            >
+              <option value="" disabled>
+                Choose a category
+              </option>
+              {sushiBarMenu.map((category) => (
+                <option key={category.category} value={category.category}>
+                  {category.category}
+                </option>
+              ))}
+            </select>
           </div>
 
           {selectedSushiBarCategory && (

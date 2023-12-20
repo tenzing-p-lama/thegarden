@@ -1,3 +1,9 @@
+@mixin sm-tablet {
+  @media (min-width: $sm-tablet-width) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
@@ -9,5 +15,6 @@
   }
 }
 
+$sm-tablet-width: 600px;
 $tablet-width: 768px;
 $desktop-width: 1280px;

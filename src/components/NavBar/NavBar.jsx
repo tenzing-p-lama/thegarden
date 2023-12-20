@@ -29,11 +29,6 @@ function NavBar({ onFooterVisibilityChange }) {
 
   return (
     <div className="navbar">
-      {/* <nav
-        className={`nav ${
-          isFooterHalfwayVisible ? "footer-halfway-visible" : ""
-        }`}
-      > */}
       <nav className="nav">
         <Link
           className={`nav-logo ${
@@ -48,11 +43,20 @@ function NavBar({ onFooterVisibilityChange }) {
         <div className="nav-hamburger">
           <a
             href="/menu"
-            className={`nav__menu ${
+            className={`nav-hamburger__item ${
               isFooterHalfwayVisible ? "footer-halfway-visible" : ""
             }`}
           >
             MENU
+          </a>
+
+          <a
+            href="/contact"
+            className={`nav-hamburger__item ${
+              isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+            }`}
+          >
+            CONTACT
           </a>
         </div>
       </nav>

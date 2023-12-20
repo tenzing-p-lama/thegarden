@@ -27,17 +27,22 @@
 
   &-hamburger {
     display: flex;
-  }
-
-  &__menu {
-    text-decoration: none;
-    color: $secondary-black;
-    cursor: pointer;
-    &:hover {
-      color: $primary-color;
-      opacity: 0.7;
+    &__item {
+      text-decoration: none;
+      color: $secondary-black;
+      padding-left: 1rem;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+        opacity: 0.7;
+      }
     }
   }
+}
+
+.logo-name {
+  font-family: "Soulgate";
+  font-size: 3rem;
 }
 
 .nav-logo.footer-halfway-visible {

@@ -1,18 +1,17 @@
+@use "../partials/variables" as *;
+
 @font-face {
   font-family: "Soulgate";
   src: url(../../assets/fonts/soulgate/Soulgate.ttf);
 }
 
-.logo-name {
-  font-family: "Soulgate";
-  font-size: 3rem;
-}
-
-.logo-jap {
-  font-family: "Hina Mincho", serif;
-}
-
 body {
   font-family: "EB Garamond", serif;
   font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "EB Garamond", serif;
 }
