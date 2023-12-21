@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.hamburger {
+  width: 3.5rem;
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  cursor: pointer;
+}
+.burger {
+  width: 3.5rem;
+  height: 0.15rem;
+  border-radius: 10px;
+  background-color: $primary-color;
+  transform-origin: 4.5px 0.15rem;
+  transition: all 0.3s linear;
+}
+
+.burger.footer-halfway-visible {
+  background-color: $secondary-white;
+}

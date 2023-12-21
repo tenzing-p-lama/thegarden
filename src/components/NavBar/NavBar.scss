@@ -25,8 +25,14 @@
     }
   }
 
+  &-section {
+    display: flex;
+  }
+
   &-hamburger {
     display: flex;
+    margin-right: 1rem;
+
     &__item {
       text-decoration: none;
       color: $secondary-black;
