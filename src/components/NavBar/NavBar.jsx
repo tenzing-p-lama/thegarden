@@ -52,7 +52,7 @@ function NavBar({ onFooterVisibilityChange }) {
           to="/"
         >
           <div className="logo-name">the garden</div>
-          <p className="logo-restaurant">RESTAURANT AND BAR</p>
+          <p className="logo-restaurant">Restaurant and Bar</p>
         </Link>
 
         <div onClick={toggleHamburger} className="nav-section">
@@ -87,6 +87,16 @@ function NavBar({ onFooterVisibilityChange }) {
           />
         </div>
       </nav>
+
+      {/* Use the NavMenu component for the menu */}
+      {/* <NavMenu isOpen={hamburger} onClose={() => setHamburger(false)}>
+        <Link to="/menu" className="nav-hamburger__item">
+          MENU
+        </Link>
+        <Link to="/contact" className="nav-hamburger__item">
+          CONTACT
+        </Link>
+      </NavMenu> */}
     </div>
   );
 }

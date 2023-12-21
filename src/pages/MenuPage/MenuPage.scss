@@ -25,15 +25,15 @@
   &-title {
     text-align: center;
     &__eng {
-      font-size: 5rem;
+      font-size: 3rem;
       position: relative;
-      bottom: 4rem;
+      bottom: 2rem;
       font-family: "Soulgate";
     }
     &__jap {
       font-family: "Hina Mincho", serif;
       color: $primary-color;
-      font-size: 5.5rem;
+      font-size: 3.5rem;
     }
   }
 
@@ -45,15 +45,15 @@
     &__header {
       margin-top: 125px;
       &-eng {
-        font-size: 4rem;
+        font-size: 3rem;
         position: relative;
-        bottom: 3rem;
+        bottom: 2rem;
         font-family: "Soulgate";
       }
       &-jap {
         font-family: "Hina Mincho", serif;
         color: $primary-color;
-        font-size: 5.5rem;
+        font-size: 3.5rem;
       }
     }
   }
