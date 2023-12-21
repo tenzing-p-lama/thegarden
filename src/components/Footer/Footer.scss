@@ -58,14 +58,14 @@
 }
 
 body {
-  transition: background-color 0.8s ease; // Add a transition to the body background-color
+  transition: background-color 0.8s ease;
 }
 body.halfway-visible {
   background-color: $primary-color;
   color: $secondary-white;
 }
 .logo-jap {
-  transition: color 0.5s ease; // Add a transition to the color of the logo-jap
+  transition: color 0.5s ease;
 }
 .logo-jap.halfway-visible {
   color: $secondary-white;

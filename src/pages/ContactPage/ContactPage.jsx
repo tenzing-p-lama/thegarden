@@ -80,7 +80,7 @@ function ContactPage() {
                   id="details"
                   cols="30"
                   rows="10"
-                  className="contact-item__input"
+                  className="contact-item__textarea"
                 />
               </td>
             </tr>

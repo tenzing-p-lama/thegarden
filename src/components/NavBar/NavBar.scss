@@ -6,7 +6,6 @@
   background: transparent;
   position: fixed;
   width: 100vw;
-  //
   z-index: 2;
 }
 
@@ -18,6 +17,10 @@
   position: absolute;
   width: 100%;
   text-align: center;
+
+  &.whitebg {
+    background-color: $secondary-white;
+  }
 
   &-logo {
     cursor: pointer;
@@ -61,8 +64,5 @@
 }
 
 .nav-logo.footer-halfway-visible {
-  color: $secondary-white;
-}
-.nav__menu.footer-halfway-visible {
   color: $secondary-white;
 }

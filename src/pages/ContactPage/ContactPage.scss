@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .contact {
   padding: 125px 2rem;
   min-height: 100vh;
@@ -11,14 +13,43 @@
 
   &-header {
     padding-bottom: 6rem;
+    margin: 100px 0 0;
+    @include sm-tablet {
+      margin: 100px 25px 0;
+    }
+    @include tablet {
+      margin: 100px 50px 0;
+    }
+    @include desktop {
+      margin: 100px 150px 0;
+    }
+  }
+
+  &-form {
+    @include sm-tablet {
+      margin: 0 25px 50px;
+    }
+    @include tablet {
+      margin: 0 50px 100px;
+    }
+    @include desktop {
+      margin: 0 150px 100px;
+    }
   }
 
   &-item {
+    &__th {
+      margin-top: 1rem;
+    }
     &__td {
       width: 100%;
     }
 
     &__input {
+      width: 100%;
+      height: 50px;
+    }
+    &__textarea {
       width: 100%;
     }
   }

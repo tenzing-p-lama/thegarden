@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hamburger.scss";
 
-const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible }) => {
+const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible, hamburger }) => {
   return (
     <>
       <div className="hamburger" onClick={onClick}>
@@ -9,13 +9,17 @@ const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible }) => {
           <>
             <div
               className={`burger burger1 ${
-                isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+                isFooterHalfwayVisible && !hamburger
+                  ? "footer-halfway-visible"
+                  : ""
               }`}
               style={{ transform: isOpen ? "rotate(10deg)" : "rotate(0)" }}
             ></div>
             <div
-              className={`burger burger3 ${
-                isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+              className={`burger burger2 ${
+                isFooterHalfwayVisible && !hamburger
+                  ? "footer-halfway-visible"
+                  : ""
               }`}
               style={{ transform: isOpen ? "rotate(-10deg)" : "rotate(0)" }}
             ></div>
@@ -24,12 +28,16 @@ const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible }) => {
           <>
             <div
               className={`burger ${
-                isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+                isFooterHalfwayVisible && !hamburger
+                  ? "footer-halfway-visible"
+                  : ""
               }`}
             ></div>
             <div
               className={`burger ${
-                isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+                isFooterHalfwayVisible && !hamburger
+                  ? "footer-halfway-visible"
+                  : ""
               }`}
             ></div>
           </>

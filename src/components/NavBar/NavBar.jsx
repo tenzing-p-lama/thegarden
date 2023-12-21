@@ -45,10 +45,10 @@ function NavBar({ onFooterVisibilityChange }) {
 
   return (
     <div className="navbar">
-      <nav className="nav">
+      <nav className={`nav ${hamburger ? "whitebg" : ""}`}>
         <Link
           className={`nav-logo ${
-            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+            isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
           }`}
           to="/"
         >
@@ -89,12 +89,11 @@ function NavBar({ onFooterVisibilityChange }) {
         </div>
       </nav>
 
-      {/* Use the NavMenu component for the menu */}
       <NavMenu isOpen={hamburger} onClose={() => setHamburger(false)}>
         <Link
           to="/menu"
           className={`nav-hamburger__item ${
-            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+            isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
           }`}
         >
           MENU
@@ -102,7 +101,7 @@ function NavBar({ onFooterVisibilityChange }) {
         <Link
           to="/contact"
           className={`nav-hamburger__item ${
-            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+            isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
           }`}
         >
           CONTACT

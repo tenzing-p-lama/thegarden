@@ -126,10 +126,9 @@
 
 .menu-category__item:focus,
 .menu-category__default .menu-category__item:not(:focus) {
-  //   color: $primary-color;
   outline: none; // Add this line to remove the default focus outline
 }
 .menu-category__selected {
   color: $primary-color;
-  outline: none; // Add this line to remove the default focus outline
+  outline: none;
 }
