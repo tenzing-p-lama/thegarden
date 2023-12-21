@@ -94,10 +94,14 @@
       display: flex;
       justify-content: flex-start;
       margin-bottom: 1rem;
+      @media (max-width: 400px) {
+        flex-direction: column;
+      }
     }
     &-title {
       margin-right: 3rem;
       min-width: 4.5rem;
+      padding-bottom: 5px;
     }
     &-group {
       display: flex;

@@ -3,8 +3,8 @@ import "./NavMenu.scss";
 
 const NavMenu = ({ isOpen, children }) => {
   return (
-    <div className={`full-screen-overlay ${isOpen ? "open" : ""}`}>
-      <div className="overlay-content">{children}</div>
+    <div className={`nav-overlay ${isOpen ? "open" : ""}`}>
+      <div className="nav-overlay-content">{children}</div>
     </div>
   );
 };

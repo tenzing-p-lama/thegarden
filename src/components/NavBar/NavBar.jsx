@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavBar.scss";
 import Hamburger from "../Hamburger/Hamburger";
+import NavMenu from "../NavMenu/NavMenu";
 
 function NavBar({ onFooterVisibilityChange }) {
   const location = useLocation();
@@ -57,7 +58,7 @@ function NavBar({ onFooterVisibilityChange }) {
 
         <div onClick={toggleHamburger} className="nav-section">
           <div className={`nav-hamburger ${hamburger ? "open" : ""}`}>
-            {menuItemsVisible && (
+            {/* {menuItemsVisible && (
               <>
                 <Link
                   to="/menu"
@@ -77,7 +78,7 @@ function NavBar({ onFooterVisibilityChange }) {
                   CONTACT
                 </Link>
               </>
-            )}
+            )} */}
           </div>
 
           <Hamburger
@@ -89,14 +90,24 @@ function NavBar({ onFooterVisibilityChange }) {
       </nav>
 
       {/* Use the NavMenu component for the menu */}
-      {/* <NavMenu isOpen={hamburger} onClose={() => setHamburger(false)}>
-        <Link to="/menu" className="nav-hamburger__item">
+      <NavMenu isOpen={hamburger} onClose={() => setHamburger(false)}>
+        <Link
+          to="/menu"
+          className={`nav-hamburger__item ${
+            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+          }`}
+        >
           MENU
         </Link>
-        <Link to="/contact" className="nav-hamburger__item">
+        <Link
+          to="/contact"
+          className={`nav-hamburger__item ${
+            isFooterHalfwayVisible ? "footer-halfway-visible" : ""
+          }`}
+        >
           CONTACT
         </Link>
-      </NavMenu> */}
+      </NavMenu>
     </div>
   );
 }
