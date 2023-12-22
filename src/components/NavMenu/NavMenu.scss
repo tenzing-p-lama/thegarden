@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .nav-overlay {
   position: fixed;
   width: 100vw;
@@ -20,5 +22,12 @@
 
   &-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @include tablet {
+      flex-direction: row;
+      gap: 8rem;
+    }
   }
 }

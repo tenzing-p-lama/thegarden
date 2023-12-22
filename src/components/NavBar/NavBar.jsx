@@ -96,7 +96,8 @@ function NavBar({ onFooterVisibilityChange }) {
             isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
           }`}
         >
-          MENU
+          <h2 className="nav-hamburger__item-jap">メニュー</h2>
+          <h1 className="nav-hamburger__item-eng">Menu</h1>
         </Link>
         <Link
           to="/contact"
@@ -104,7 +105,8 @@ function NavBar({ onFooterVisibilityChange }) {
             isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
           }`}
         >
-          CONTACT
+          <h2 className="nav-hamburger__item-jap">問い合わせ</h2>
+          <h1 className="nav-hamburger__item-eng">Contact</h1>
         </Link>
       </NavMenu>
     </div>

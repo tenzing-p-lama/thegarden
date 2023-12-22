@@ -41,8 +41,6 @@
 
     &__item {
       text-decoration: none;
-      color: $secondary-black;
-      padding-left: 1rem;
       cursor: pointer;
       &.footer-halfway-visible {
         color: $secondary-white;
@@ -50,6 +48,18 @@
       &:hover {
         color: $primary-color;
         opacity: 0.7;
+      }
+      &-eng {
+        font-size: 3rem;
+        position: relative;
+        bottom: 2rem;
+        font-family: "Soulgate";
+        color: $secondary-black;
+      }
+      &-jap {
+        font-family: "Hina Mincho", serif;
+        color: $primary-color;
+        font-size: 3.5rem;
       }
     }
   }

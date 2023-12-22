@@ -126,9 +126,6 @@ const MenuPage = () => {
             {sushiBarMenu.map((category) => (
               <div key={category.category} className="menu-category">
                 <button
-                  //   className="menu-category__item"
-                  //   onClick={() => handleSushiBarCategoryClick(category.category)}
-
                   ref={sushiBarCategoryRef}
                   className={`menu-category__item ${
                     category.category === selectedSushiBarCategory
