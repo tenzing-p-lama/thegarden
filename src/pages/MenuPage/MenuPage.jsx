@@ -21,12 +21,10 @@ const MenuPage = () => {
   const sushiBarCategoryRef = useRef(null);
 
   useEffect(() => {
-    // Set focus on the default food category button
     foodCategoryRef.current.focus();
   }, []);
 
   useEffect(() => {
-    // Set focus on the default sushi bar category button
     sushiBarCategoryRef.current.focus();
   }, []);
 
@@ -86,11 +84,17 @@ const MenuPage = () => {
                 Choose a category
               </option>
               {menuData.map((category) => (
-                <option key={category.category} value={category.category}>
+                <option
+                  key={category.category}
+                  value={category.category}
+                  className="menu-categories__dropdown-item"
+                >
                   {category.category}
                 </option>
               ))}
             </select>
+
+            <span class="menu-categories__dropdown-icon">&#x25BC;</span>
           </div>
 
           {selectedFoodCategory && (
@@ -155,6 +159,8 @@ const MenuPage = () => {
                 </option>
               ))}
             </select>
+
+            <span class="menu-categories__dropdown-icon">&#x25BC;</span>
           </div>
 
           {selectedSushiBarCategory && (
