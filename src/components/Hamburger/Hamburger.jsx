@@ -13,7 +13,7 @@ const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible, hamburger }) => {
                   ? "footer-halfway-visible"
                   : ""
               }`}
-              style={{ transform: isOpen ? "rotate(-10deg)" : "rotate(0)" }}
+              style={{ transform: isOpen ? "rotate(25deg)" : "rotate(0)" }}
             ></div>
             <div
               className={`burger burger2 ${
@@ -21,7 +21,7 @@ const Hamburger = ({ isOpen, onClick, isFooterHalfwayVisible, hamburger }) => {
                   ? "footer-halfway-visible"
                   : ""
               }`}
-              style={{ transform: isOpen ? "rotate(10deg)" : "rotate(0)" }}
+              style={{ transform: isOpen ? "rotate(-25deg)" : "rotate(0)" }}
             ></div>
           </>
         ) : (
