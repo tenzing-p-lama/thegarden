@@ -55,6 +55,8 @@
       font-family: "EB Garamond", serif;
       font-weight: 700;
       font-size: 1em;
+      color: black;
+      background-color: transparent;
       @include tablet {
         display: none;
       }
