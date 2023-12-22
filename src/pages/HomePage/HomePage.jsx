@@ -39,9 +39,17 @@ export default function HomePage() {
           <h2 className="desc__title">CUISINE</h2>
 
           <p className="desc__text" data-aos="fade-up">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero
-            modi harum nostrum corrupti omnis fugit illo reiciendis natus quo.
-            Ea quam ipsam cupiditate quisquam quos incidunt, vero illo maiores.
+            Indulge in the artistry of authentic Japanese cuisine at our
+            restaurant, where every dish is a harmonious blend of precision,
+            tradition, and the freshest ingredients. Immerse yourself in the
+            rich flavors of Japan, from meticulously crafted sushi and sashimi
+            to savory ramen and delectable tempura. Our chefs, masters of their
+            craft, bring the essence of Japanese culinary artistry to your
+            table, inviting you to savor each bite as a journey through the
+            diverse and exquisite tastes of Japan. Whether you're a connoisseur
+            or a newcomer to Japanese cuisine, our menu promises an
+            unforgettable dining experience that captures the true spirit of
+            Japan's gastronomic heritage.
           </p>
         </div>
 
@@ -53,10 +61,19 @@ export default function HomePage() {
           <h2 className="desc__title">BAR</h2>
 
           <p className="desc__text" data-aos="fade-up">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-            velit asperiores accusamus eius quo temporibus non quam
-            consequuntur, voluptate iure ad deleniti optio aperiam cumque quos
-            odio magni, perspiciatis expedita?
+            Step into our Japanese bar and embark on a spirited journey through
+            the art of mixology and the refined world of Japanese spirits. Our
+            bar is a haven where traditional craftsmanship meets contemporary
+            innovation, offering an extensive selection of premium sake, shochu,
+            and expertly crafted cocktails. Immerse yourself in the intimate
+            ambiance as our skilled bartenders showcase their expertise,
+            creating signature drinks that reflect the sophistication and depth
+            of Japanese libations. Whether you're savoring a meticulously
+            crafted cocktail or exploring the nuanced profiles of rare Japanese
+            whiskies, our bar is a sanctuary for those seeking a refined and
+            social drinking experience. Elevate your evening as we invite you to
+            unwind, celebrate, and indulge in the distinctive allure of our
+            Japanese bar.
           </p>
         </div>
 

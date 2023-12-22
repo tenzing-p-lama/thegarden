@@ -105,7 +105,7 @@ const MenuPage = () => {
                     <li key={item.id} className="menu-list__item">
                       <h3>{item.name}</h3>
                       <p>{item.description}</p>
-                      <p>${item.price.toFixed(2)}</p>
+                      <p>${item.price}</p>
                     </li>
                   ))}
               </ul>
@@ -153,7 +153,7 @@ const MenuPage = () => {
               ))}
             </select>
 
-            <span class="menu-categories__dropdown-icon">&#x25BC;</span>
+            <span className="menu-categories__dropdown-icon">&#x25BC;</span>
           </div>
 
           {selectedSushiBarCategory && (
@@ -167,7 +167,7 @@ const MenuPage = () => {
                     <li key={item.id} className="menu-list__item">
                       <h3>{item.name}</h3>
                       <p>{item.description}</p>
-                      <p>${item.price.toFixed(2)}</p>
+                      <p>${item.price}</p>
                     </li>
                   ))}
               </ul>

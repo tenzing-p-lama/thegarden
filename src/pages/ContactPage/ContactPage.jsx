@@ -27,7 +27,7 @@ function ContactPage() {
             <tr className="contact-item">
               <th className="contact-item__th">
                 <label htmlFor="name" className="contact-item__label">
-                  <p>Name</p>
+                  Name
                 </label>
               </th>
 
@@ -43,7 +43,7 @@ function ContactPage() {
             <tr className="contact-item">
               <th className="contact-item__th">
                 <label htmlFor="phone" className="contact-item__label">
-                  <p>Phone number</p>
+                  Phone number
                 </label>
               </th>
 
@@ -59,7 +59,7 @@ function ContactPage() {
             <tr className="contact-item">
               <th className="contact-item__th">
                 <label htmlFor="email" className="contact-item__label">
-                  <p>Email address</p>
+                  Email address
                 </label>
               </th>
 
@@ -75,7 +75,7 @@ function ContactPage() {
             <tr className="contact-item">
               <th className="contact-item__th">
                 <label htmlFor="details" className="contact-item__label">
-                  <p>Inquiry details</p>
+                  Inquiry details
                 </label>
               </th>
 
@@ -91,7 +91,9 @@ function ContactPage() {
             </tr>
           </tbody>
         </table>
-        <button type="submit">Send</button>
+        <button className="contact__btn" type="submit">
+          Send
+        </button>
       </form>
     </div>
   );
