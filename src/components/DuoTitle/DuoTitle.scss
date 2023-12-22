@@ -1,0 +1,16 @@
+@use "../../styles/partials/variables" as *;
+
+.title {
+  text-align: center;
+  &__eng {
+    font-size: 3rem;
+    position: relative;
+    bottom: 2rem;
+    font-family: "Soulgate";
+  }
+  &__jap {
+    font-family: "Hina Mincho", serif;
+    color: $primary-color;
+    font-size: 3.5rem;
+  }
+}

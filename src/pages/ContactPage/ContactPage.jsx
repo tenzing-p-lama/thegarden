@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ContactPage.scss";
+import DuoTitle from "../../components/DuoTitle/DuoTitle";
 
 function ContactPage() {
   const handleSubmit = (e) => {
@@ -10,10 +11,14 @@ function ContactPage() {
     console.log("Form data:", Object.fromEntries(formData));
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contact">
       <div className="contact-header">
-        <h1>Contact Us</h1>
+        <DuoTitle japTitle="問い合わせ" engTitle="Contact" />
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit}>

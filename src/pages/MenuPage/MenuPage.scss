@@ -4,14 +4,20 @@
 
 .header {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include sm-tablet {
+    flex-direction: row;
+  }
   &-menu {
     border: 1px solid $secondary-black;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 0 1rem;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     color: $secondary-black;
+    font-size: 1rem;
   }
 }
 
@@ -23,21 +29,6 @@
   text-align: center;
   width: 100%;
 
-  &-title {
-    text-align: center;
-    &__eng {
-      font-size: 3rem;
-      position: relative;
-      bottom: 2rem;
-      font-family: "Soulgate";
-    }
-    &__jap {
-      font-family: "Hina Mincho", serif;
-      color: $primary-color;
-      font-size: 3.5rem;
-    }
-  }
-
   &-section {
     display: flex;
     flex-direction: column;
@@ -45,17 +36,6 @@
 
     &__header {
       margin-top: 125px;
-      &-eng {
-        font-size: 3rem;
-        position: relative;
-        bottom: 2rem;
-        font-family: "Soulgate";
-      }
-      &-jap {
-        font-family: "Hina Mincho", serif;
-        color: $primary-color;
-        font-size: 3.5rem;
-      }
     }
   }
 

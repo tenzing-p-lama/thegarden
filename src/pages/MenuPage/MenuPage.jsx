@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./MenuPage.scss";
 import { menuData } from "../../data/menu";
 import { sushiBarMenu } from "../../data/barMenu";
+import DuoTitle from "../../components/DuoTitle/DuoTitle";
 
 const MenuPage = () => {
   const [selectedFoodCategory, setSelectedFoodCategory] =
@@ -34,10 +35,7 @@ const MenuPage = () => {
 
   return (
     <div className="App-header">
-      <div className="menu-title">
-        <h2 className="menu-title__jap">メニュー</h2>
-        <h1 className="menu-title__eng">Menu</h1>
-      </div>
+      <DuoTitle japTitle="メニュー" engTitle="Menu" />
 
       <div className="header">
         <a href="#menu-section" className="header-menu">
@@ -51,8 +49,7 @@ const MenuPage = () => {
       <div className="menu">
         <section className="menu-section" id="menu-section">
           <div className="menu-section__header">
-            <h2 className="menu-section__header-jap">食べ物</h2>
-            <h2 className="menu-section__header-eng">Food Menu</h2>
+            <DuoTitle japTitle="食べ物" engTitle="Food Menu" />
           </div>
 
           <div className="menu-categories">
@@ -118,8 +115,7 @@ const MenuPage = () => {
 
         <section className="menu-section" id="sushibar-section">
           <div className="menu-section__header">
-            <h2 className="menu-section__header-jap">寿司バー</h2>
-            <h2 className="menu-section__header-eng">Sushi Bar Menu</h2>
+            <DuoTitle japTitle="寿司バー" engTitle="Sushi Bar Menu" />
           </div>
 
           <div className="menu-categories">

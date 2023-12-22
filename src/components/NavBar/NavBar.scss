@@ -20,6 +20,7 @@
 
   &.whitebg {
     background-color: $secondary-white;
+    transition: background-color 0.6s ease;
   }
 
   &-logo {
@@ -42,24 +43,9 @@
     &__item {
       text-decoration: none;
       cursor: pointer;
-      &.footer-halfway-visible {
-        color: $secondary-white;
-      }
+      color: $secondary-black;
       &:hover {
-        color: $primary-color;
         opacity: 0.7;
-      }
-      &-eng {
-        font-size: 3rem;
-        position: relative;
-        bottom: 2rem;
-        font-family: "Soulgate";
-        color: $secondary-black;
-      }
-      &-jap {
-        font-family: "Hina Mincho", serif;
-        color: $primary-color;
-        font-size: 3.5rem;
       }
     }
   }

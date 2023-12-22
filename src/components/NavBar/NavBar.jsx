@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./NavBar.scss";
 import Hamburger from "../Hamburger/Hamburger";
 import NavMenu from "../NavMenu/NavMenu";
+import DuoTitle from "../DuoTitle/DuoTitle";
 
 function NavBar({ onFooterVisibilityChange }) {
   const location = useLocation();
@@ -92,21 +93,21 @@ function NavBar({ onFooterVisibilityChange }) {
       <NavMenu isOpen={hamburger} onClose={() => setHamburger(false)}>
         <Link
           to="/menu"
-          className={`nav-hamburger__item ${
-            isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
-          }`}
+          // className={`nav-hamburger__item ${
+          //   isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
+          // }`}
+          className="nav-hamburger__item"
         >
-          <h2 className="nav-hamburger__item-jap">メニュー</h2>
-          <h1 className="nav-hamburger__item-eng">Menu</h1>
+          <DuoTitle japTitle="メニュー" engTitle="Menu" />
         </Link>
         <Link
           to="/contact"
-          className={`nav-hamburger__item ${
-            isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
-          }`}
+          // className={`nav-hamburger__item ${
+          //   isFooterHalfwayVisible && !hamburger ? "footer-halfway-visible" : ""
+          // }`}
+          className="nav-hamburger__item"
         >
-          <h2 className="nav-hamburger__item-jap">問い合わせ</h2>
-          <h1 className="nav-hamburger__item-eng">Contact</h1>
+          <DuoTitle japTitle="問い合わせ" engTitle="Contact" />
         </Link>
       </NavMenu>
     </div>
