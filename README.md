@@ -7,17 +7,18 @@ This is a responsive website for a The Garden restaurant and bar. The website sh
 ### Menu Display
 
 View the restaurant's menu with details on dishes, descriptions, and prices.
-/image/
+![Alt text](/public/Screenshot_Menu1.png)
+![Alt text](/public/Screenshot_Menu2.png)
 
 ### Contact Details
 
 Find essential contact information and social media for the restaurant.
-/image/
+![Alt text](/public/Screenshot_Footer-ContactDetails.png)
 
 ### Location Map
 
 Locate the restaurant on a map to ease navigation.
-/image/
+![Alt text](/public/Screenshot_GoogleMap.png)
 
 ### Future Enhancement
 
@@ -37,6 +38,12 @@ A booking form feature is planned for future implementation.
 - Sass
 - Git
 
+## Inspiration
+
+- https://aluna.uk.com/menus/food-menu/
+- https://59.com/
+- https://www.hana-mura.com/
+
 ## Deployment
 
-The application is deployed using Netflify and can be accessed /here/
+The application is deployed using Netflify and can be accessed https://thegardenatditmas.netlify.app/
